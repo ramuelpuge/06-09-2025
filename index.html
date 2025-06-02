@@ -64,6 +64,49 @@
       transition: opacity 0.5s ease;
     }
 
+    #section0 {
+      background-color: #e6d7f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #password-input {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      padding: 10px;
+      border: 2px solid var(--accent);
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    #submit-btn {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      background: var(--accent);
+      color: var(--text-light);
+      padding: 10px 30px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 8px 15px rgba(146, 82, 217, 0.6);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+
+    #submit-btn:hover, #submit-btn:focus {
+      background: #6e39b0;
+      transform: scale(1.1);
+      outline: none;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+
     #greeting {
       font-family: 'Great Vibes', cursive;
       font-size: 3.8rem;
@@ -118,6 +161,10 @@
       outline: none;
     }
 
+    #section1 {
+      display: none;
+    }
+
     #section2 {
       display: none;
       background: linear-gradient(135deg, #fef9f6, #fce8e9);
@@ -146,8 +193,8 @@
       padding: 40px 50px;
       background: linear-gradient(135deg, #fff0f4 0%, #feeef3 100%);
       box-shadow:
-        0 0 20px rgba(255 192 203 / 0.5),
-        inset 0 0 25px rgba(255 192 203 / 0.3);
+        0 0 20px rgba(255, 192, 203, 0.5),
+        inset 0 0 25px rgba(255, 192, 203, 0.3);
       border: 2px solid #fbdbdd;
       border-radius: 25px;
     }
@@ -236,7 +283,15 @@
 </head>
 <body>
 
-<section id="section1" class="section">
+<section id="section0" class="section">
+  <h1>Please enter your password</h1>
+  <p>Hint: Birthday mo love love</p>
+  <input type="text" id="password-input" placeholder="Enter password" />
+  <button id="submit-btn">Submit</button>
+  <p id="error-message" class="error-message" style="display: none;"></p>
+</section>
+
+<section id="section1" class="section" style="display: none;">
   <h1 id="greeting">Happy Birthday, My Love! 🎂</h1>
 
   <div class="images-row">
@@ -251,12 +306,12 @@
     </div>
   </div>
 
-  <button id="next-btn">Click This</button>
+  <button id="next-btn">Next</button>
 </section>
 
-<section id="section2" class="section">
+<section id="section2" class="section" style="display: none;">
   <p id="birthday-message" tabindex="0">
-    Hi baby! This is your day today. Happy, happy 19th birthday sa aking cutie, pretty, and beautiful love. Sana magustuhan mo itong simple gift ko para sa’yo. Ginawa ko itong website na ’to dahil gusto kong malaman mo na gagawin ko ang lahat at ibibigay ko ang lahat para lang malaman mo at maparamdam ko, at mapatunayan ko sa’yo na mahal na mahal na mahal kita. Ang wish ko po para sa’yo ay sana maging masaya ka palagi sa araw-araw. Sana maraming blessings pa ang dumating sa’yo, at higit sa lahat, sana palagi kang healthy. Palagi mong tatandaan na andito lang ako, palaging nasa tabi mo, susuportahan ka sa kahit anong gusto mo. Palagi mong tatandaan na kahit anong mangyari, mahal na mahal kita sobra sobra, at palagi kitang pipiliin araw-araw. Tandaan mo din na kahit anong pagsubok ang pagdaanan natin, andito lang ako palagi sa tabi mo palagi kang uunawain at pipiliin araw-araw. Kahit may tampuhan, away, at misunderstanding tayo, palagi mong tatandaan na hindi ako magsasawang intindihin at mahalin ka sa mga araw na ’yon. Nagpapasalamat ako dahil ikaw yung babaeng nagparamdam sa’kin na worth it lahat ng paglaban ko. Ikaw yung babaeng nagparamdam na worth it akong mahalin, at higit sa lahat, ikaw yung babaeng nagparamdam ng saya at kilig sa buhay ko. Totoo yung sinasabi ko na hinding-hindi magbabago yung pananaw ko na sobrang swerte ko sa’yo dahil ayun ang tunay at totoo. Super duper happy, thankful, and grateful ako palagi lalo na kay Lord dahil binigyan Niya ako ng isang babaeng kagaya mo. Kaya palagi mong tatandaan na kahit anong mangyari sa’ting dalawa, andito lang ako palagi, and I will always and forever love you unconditionally! Once again, happy, happy birthday to my wonderful, beautiful, gorgeous, pretty, cutie, and lovable baby! Enjoy your most wonderful day, my baby! I love you so much, always and forever! 💜💜💜
+    Hi lovee! This is your day today. Happy, happy 19th birthday sa aking cutie, pretty, and beautiful love love. Sana magustuhan mo itong simple gift ko para sa’yo. Ginawa ko itong website na ’to dahil gusto kong malaman mo na gagawin ko ang lahat at ibibigay ko ang lahat para lang malaman mo at maparamdam ko, at mapatunayan ko sa’yo na mahal na mahal na mahal kita. Ang wish ko po para sa’yo ay sana maging masaya ka palagi sa araw-araw. Sana maraming blessings pa ang dumating sa’yo, at higit sa lahat, sana palagi kang healthy. Palagi mong tatandaan na andito lang ako, palaging nasa tabi mo, susuportahan ka sa kahit anong gusto mo. Palagi mong tatandaan na kahit anong mangyari, mahal na mahal kita sobra sobra, at palagi kitang pipiliin araw-araw. Tandaan mo din na kahit anong pagsubok ang pagdaanan natin, andito lang ako palagi sa tabi mo palagi kang uunawain at pipiliin araw-araw. Kahit may tampuhan, away, at misunderstanding tayo, palagi mong tatandaan na hindi ako magsasawang intindihin at mahalin ka sa mga araw na ’yon. Nagpapasalamat ako dahil ikaw yung babaeng nagparamdam sa’kin na worth it lahat ng paglaban ko. Ikaw yung babaeng nagparamdam na worth it akong mahalin, at higit sa lahat, ikaw yung babaeng nagparamdam ng saya at kilig sa buhay ko. Totoo yung sinasabi ko na hinding-hindi magbabago yung pananaw ko na sobrang swerte ko sa’yo dahil ayun ang tunay at totoo. Super duper happy, thankful, and grateful ako palagi lalo na kay Lord dahil binigyan Niya ako ng isang babaeng kagaya mo. Kaya palagi mong tatandaan na kahit anong mangyari sa’ting dalawa, andito lang ako palagi, and I will always and forever love you unconditionally! Once again, happy, happy birthday to my wonderful, beautiful, gorgeous, pretty, cutie, and lovable future GF! Enjoy your most wonderful day, my love love! I love you so much, always and forever! 💜💜💜
   </p>
 </section>
 
@@ -266,17 +321,35 @@
 <audio id="bg-music-romance" loop preload="auto" src="14.mp3"></audio>
 
 <script>
-  const nextBtn = document.getElementById('next-btn');
+  const passwordInput = document.getElementById('password-input');
+  const submitBtn = document.getElementById('submit-btn');
+  const section0 = document.getElementById('section0');
   const section1 = document.getElementById('section1');
   const section2 = document.getElementById('section2');
   const bgMusicBirthday = document.getElementById('bg-music-birthday');
   const bgMusicRomance = document.getElementById('bg-music-romance');
+  const errorMessage = document.getElementById('error-message');
+  const nextBtn = document.getElementById('next-btn');
   const heartsContainer = document.getElementById('hearts-container');
 
-  window.onload = function() {
-    bgMusicBirthday.play();
-    createHearts();
-  };
+  submitBtn.addEventListener('click', () => {
+    const password = passwordInput.value;
+    if (password === "06-09-25") {
+      bgMusicBirthday.play();
+      section0.style.opacity = '0';
+      setTimeout(() => {
+        section0.style.display = 'none';
+        section1.style.display = 'flex';
+        section1.style.opacity = '0';
+        setTimeout(() => {
+          section1.style.opacity = '1';
+        }, 10);
+      }, 500);
+    } else {
+      errorMessage.textContent = "Wrong password, please try 06-09-25";
+      errorMessage.style.display = "block";
+    }
+  });
 
   nextBtn.addEventListener('click', () => {
     section1.style.opacity = '0';
@@ -292,13 +365,20 @@
     }, 500);
   });
 
+  window.onload = function() {
+    createHearts();
+  };
+
   function createHearts() {
     for (let i = 0; i < 50; i++) {
       const heart = document.createElement('div');
       heart.className = 'heart';
       heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random duration
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
       heartsContainer.appendChild(heart);
     }
   }
 </script>
+
+</body>
+</html>
