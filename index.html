@@ -307,6 +307,7 @@
   </div>
 
   <button id="next-btn">Next</button>
+  <p style="margin-top: 20px; font-size: 1.2rem; color: #3a1d6b;">PS: Finish the Birthday song first my love, before clicking the Next button.</p>
 </section>
 
 <section id="section2" class="section" style="display: none;">
@@ -374,7 +375,7 @@
       const heart = document.createElement('div');
       heart.className = 'heart';
       heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+      heart.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random duration
       heartsContainer.appendChild(heart);
     }
   }
